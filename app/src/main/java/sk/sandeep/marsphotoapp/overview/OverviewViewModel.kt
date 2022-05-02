@@ -12,27 +12,30 @@ import sk.sandeep.marsphotoapp.network.MarsApi
  */
 class OverviewViewModel : ViewModel() {
 
-    // The internal MutableLiveData String that stores the most recent response
+    // The internal MutableLiveData that stores the status of the most recent request
     private val _status = MutableLiveData<String>()
 
-    // The external immutable LiveData for the response String
-    val status: LiveData<String>
-        get() = _status
-
+    // The external immutable LiveData for the request status
+    val status: LiveData<String> = _status
     /**
-     * Call getMarsRealEstateProperties() on init so we can display status immediately.
+     * Call getMarsPhotos() on init so we can display status immediately.
      */
     init {
         getMarsPhotos()
     }
 
     /**
-     * Sets the value of the status LiveData to the Mars API status.
+     * Gets Mars photos information from the Mars API Retrofit service and updates the
+     * [MarsPhoto] [List] [LiveData].
      */
     private fun getMarsPhotos() {
         viewModelScope.launch {
-            val listResult = MarsApi.retrofitService.getPhotos()
-            _status.value = listResult
+            try {
+                val listResult = MarsApi.retrofitService.getPhotos()
+                _status.value = "Success: ${listResult.size} Mars photos retrieved"
+            } catch (e: Exception) {
+                _status.value = "Failure: ${e.message}"
+            }
         }
     }
 }
