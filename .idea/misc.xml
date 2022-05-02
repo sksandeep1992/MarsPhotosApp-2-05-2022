@@ -3,13 +3,16 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/android_project/MarsPhotoApp/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.32" />
         <entry key="..\:/android_project/MarsPhotoApp/app/src/main/res/drawable/ic_broken_image.xml" value="0.1" />
         <entry key="..\:/android_project/MarsPhotoApp/app/src/main/res/drawable/ic_connection_error.xml" value="0.1" />
         <entry key="..\:/android_project/MarsPhotoApp/app/src/main/res/drawable/ic_for_sale_outline.xml" value="0.1" />
+        <entry key="..\:/android_project/MarsPhotoApp/app/src/main/res/drawable/ic_launcher_background.xml" value="0.32" />
         <entry key="..\:/android_project/MarsPhotoApp/app/src/main/res/drawable/loading_img.xml" value="0.1" />
         <entry key="..\:/android_project/MarsPhotoApp/app/src/main/res/layout/activity_main.xml" value="0.21851851851851853" />
         <entry key="..\:/android_project/MarsPhotoApp/app/src/main/res/layout/fragment_detail.xml" value="0.21851851851851853" />
         <entry key="..\:/android_project/MarsPhotoApp/app/src/main/res/layout/fragment_overview.xml" value="0.21851851851851853" />
+        <entry key="..\:/android_project/MarsPhotoApp/app/src/main/res/layout/grid_view_item.xml" value="0.1" />
       </map>
     </option>
   </component>

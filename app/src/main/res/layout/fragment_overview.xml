@@ -5,6 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <data>
+
         <variable
             name="viewModel"
             type="sk.sandeep.marsphotoapp.overview.OverviewViewModel" />
@@ -15,10 +16,11 @@
         android:layout_height="match_parent"
         tools:context=".overview.OverviewFragment">
 
-        <TextView
+        <ImageView
+            android:id="@+id/status_image"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@{viewModel.status}"
+            android:contentDescription="@string/moon_image"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
