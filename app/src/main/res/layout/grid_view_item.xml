@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
 
     <data>
+
         <variable
-            name="viewModel"
-            type="sk.sandeep.marsphotoapp.overview.OverviewViewModel" />
+            name="photo"
+            type="sk.sandeep.marsphotoapp.network.MarsPhoto" />
     </data>
 
     <ImageView
@@ -13,8 +15,9 @@
         android:layout_width="wrap_content"
         android:layout_height="170dp"
         android:adjustViewBounds="true"
+        android:contentDescription="@string/app_name"
         android:padding="2dp"
         android:scaleType="fitXY"
-        app:imageUrl="@{viewModel.photos.imgSrcUrl}"
-        android:contentDescription="@string/app_name" />
+        app:imageUrl="@{photo.imgSrcUrl}"
+        tools:src="@tools:sample/backgrounds/scenic" />
 </layout>
